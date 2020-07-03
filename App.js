@@ -1,17 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
+
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, StatusBar, SafeAreaView } from 'react-native';
 
 //Import Components 
 import PrimeiroComponente from './src/components/PrimeiroComponente';
+import ParOuImpar from './src/components/ParOuImpar'
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
+     <StatusBar
+     barStyle="dark-content"
+     backgroundColor="transparent"
+     translucent
+     />
       <Text>Hello Word!</Text>
       <PrimeiroComponente />
-      <StatusBar style="auto" />
-    </View>
+      <ParOuImpar numero={4}/>
+    </SafeAreaView>
   );
 }
 
