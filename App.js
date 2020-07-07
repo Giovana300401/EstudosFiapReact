@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { StyleSheet, Text, View, StatusBar, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, View, StatusBar} from 'react-native';
 
 //Import Components 
 import PrimeiroComponente from './src/components/PrimeiroComponente';
@@ -8,7 +8,7 @@ import ParOuImpar from './src/components/ParOuImpar'
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
      <StatusBar
      barStyle="dark-content"
      backgroundColor="transparent"
@@ -17,7 +17,7 @@ export default function App() {
       <Text>Hello Word!</Text>
       <PrimeiroComponente />
       <ParOuImpar numero={4}/>
-    </SafeAreaView>
+    </View>
   );
 }
 
